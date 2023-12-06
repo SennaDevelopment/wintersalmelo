@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+   <form id="inputForm" method="POST" action="https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec">
+  <label for=”Voornaam” style="color:#ff0000">*Vereist</label>
+  <input name="Voornaam" type="text" placeholder="Voornaam" required><br/>
+  <label for=”Voornaam” style="color:#ff0000">*Vereist</label>
+  <input name="Achternaam" type="text" placeholder="Achternaam" required><br/>
+  <label for=”Achternaam” style="color:#ff0000">*Vereist</label>
+  <input name="Email" type="email" placeholder="Email" required><br/>
+  <label for=”Email” style="color:#ff0000">*Vereist</label>
+  <input name="Telefoonnummer" type="text" placeholder="Telefoonnummer" required><br/>
+  <label for=”Telefoonnummer” style="color:#ff0000">*Vereist</label>
+  <input name="Leeftijd" type="text" placeholder="Leeftijd" required><br/>
+  <input name="Antwoord #1" type="text" placeholder="Antwoord #1" required><br/>
+  <input name="Antwoord #2" type="text" placeholder="Antwoord #2" required><br/>
+  <input name="Antwoord #3" type="text" placeholder="Antwoord #3" required><br/>
+  <input name="Antwoord #4" type="text" placeholder="Antwoord #4" required><br/>
+  <input name="Antwoord #5" type="text" placeholder="Antwoord #5" required><br/>
+  <input name="Antwoord #6" type="text" placeholder="Antwoord #6" required><br/>
+  <input name="Antwoord #7" type="text" placeholder="Antwoord #7" required><br/>
+  <input name="Antwoord #8" type="text" placeholder="Antwoord #8" required><br/>
+  <input name="Antwoord #9" type="text" placeholder="Antwoord #9" required><br/>
+  <input name="Antwoord #10" type="text" placeholder="Antwoord #10" required><br/>
+  <input name="Antwoord #11" type="text" placeholder="Antwoord #11" required><br/>
+  <input name="Antwoord #12" type="text" placeholder="Antwoord #12" required><br/>
+  <button type="submit">Versturen</button>
+</form>
+<style>
+input[type=text], input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+label {
+  font-family: "Arial";
+}
+</style>
+<script type="text/javascript"> window.addEventListener("DOMContentLoaded", function() { const yourForm = document.getElementById('inputForm'); yourForm.addEventListener("submit", function(e) { e.preventDefault(); const data = new FormData(yourForm); const action = e.target.action; fetch(action, { method: 'POST', body: data, }) .then(() => { window.location.replace('https://speurtochtalmelo.nl/verstuurd') }) }) }); </script>
+</html>
