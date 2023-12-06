@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <form id="inputForm" method="POST" action="https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec">
+   <form id="inputForm" method="POST">
   <label for=”Voornaam” style="color:#ff0000">*Vereist</label>
   <input name="Voornaam" type="text" placeholder="Voornaam" required><br/>
   <label for=”Voornaam” style="color:#ff0000">*Vereist</label>
@@ -61,5 +61,15 @@ label {
   font-family: "Arial";
 }
 </style>
-<script type="text/javascript"> window.addEventListener("DOMContentLoaded", function() { const yourForm = document.getElementById('inputForm'); yourForm.addEventListener("submit", function(e) { e.preventDefault(); const data = new FormData(yourForm); const action = e.target.action; fetch(action, { method: 'POST', body: data, }) .then(() => { alert("Verstuurd!"); }) }) }); </script>
+<script>
+const scriptURL = "https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec";
+const form = document.forms['inputForm']
+form.addEventListener('submit', e => {
+   e.preventDefault()
+   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+         alert('Success!', response);
+      }).catch(error => console.error('Error!', error.message))
+});
+</script>
 </html>
