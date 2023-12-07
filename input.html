@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <form id="inputForm" method="POST">
+  <form id="inputForm" method="POST" action="https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec">
   <label for=”Voornaam” style="color:#ff0000">*Vereist</label>
   <input name="Voornaam" type="text" placeholder="Voornaam" required><br/>
   <label for=”Voornaam” style="color:#ff0000">*Vereist</label>
@@ -11,18 +11,20 @@
   <input name="Telefoonnummer" type="text" placeholder="Telefoonnummer" required><br/>
   <label for=”Telefoonnummer” style="color:#ff0000">*Vereist</label>
   <input name="Leeftijd" type="text" placeholder="Leeftijd" required><br/>
-  <input name="Antwoord #1" type="text" placeholder="Antwoord #1" required><br/>
-  <input name="Antwoord #2" type="text" placeholder="Antwoord #2" required><br/>
-  <input name="Antwoord #3" type="text" placeholder="Antwoord #3" required><br/>
-  <input name="Antwoord #4" type="text" placeholder="Antwoord #4" required><br/>
-  <input name="Antwoord #5" type="text" placeholder="Antwoord #5" required><br/>
-  <input name="Antwoord #6" type="text" placeholder="Antwoord #6" required><br/>
-  <input name="Antwoord #7" type="text" placeholder="Antwoord #7" required><br/>
-  <input name="Antwoord #8" type="text" placeholder="Antwoord #8" required><br/>
-  <input name="Antwoord #9" type="text" placeholder="Antwoord #9" required><br/>
-  <input name="Antwoord #10" type="text" placeholder="Antwoord #10" required><br/>
-  <input name="Antwoord #11" type="text" placeholder="Antwoord #11" required><br/>
-  <input name="Antwoord #12" type="text" placeholder="Antwoord #12" required><br/>
+  <input name="Antwoord #1" type="radio" value="A" required> A. De Almelose Oliebol<br/>
+  <input name="Antwoord #1" type="radio" value="B" required> B. Gouki<br/>
+  <input name="Antwoord #1" type="radio" value="C" required> C. De appelflap<br/>
+  <input name="Antwoord #2" type="text" placeholder="Antwoord #2" ><br/>
+  <input name="Antwoord #3" type="text" placeholder="Antwoord #3" ><br/>
+  <input name="Antwoord #4" type="text" placeholder="Antwoord #4" ><br/>
+  <input name="Antwoord #5" type="text" placeholder="Antwoord #5" ><br/>
+  <input name="Antwoord #6" type="text" placeholder="Antwoord #6" ><br/>
+  <input name="Antwoord #7" type="text" placeholder="Antwoord #7" ><br/>
+  <input name="Antwoord #8" type="text" placeholder="Antwoord #8" ><br/>
+  <input name="Antwoord #9" type="text" placeholder="Antwoord #9" ><br/>
+  <input name="Antwoord #10" type="text" placeholder="Antwoord #10" ><br/>
+  <input name="Antwoord #11" type="text" placeholder="Antwoord #11" ><br/>
+  <input name="Antwoord #12" type="text" placeholder="Antwoord #12" ><br/>
   <button type="submit">Versturen</button>
 </form>
 <style>
@@ -61,7 +63,7 @@ label {
   font-family: "Arial";
 }
 </style>
-<script>
+<script><!--
 const scriptURL = "https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec";
 const form = document.forms['inputForm']
 form.addEventListener('submit', e => {
@@ -70,6 +72,6 @@ form.addEventListener('submit', e => {
       .then(response => {
          alert('Success!', response);
       }).catch(error => console.error('Error!', error.message))
-});
+});-->
 </script>
 </html>
