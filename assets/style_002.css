@@ -553,8 +553,6 @@ a:active {
     padding-right: 0;
 }
 li.menu-item-has-children > a:after {
-    font-family: "FontAwesome";
-    content: "\f107";
     margin-left: 10px;
     font-size: 15px;
 }
@@ -576,8 +574,6 @@ ul ul .menu-item-has-children:hover>.dropdown-menu {
 }
 
 ul ul .menu-item-has-children>a:after {
-    font-family: "FontAwesome";
-    content: "\f105";
     position: absolute;
     right: 8px;
 }
