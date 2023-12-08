@@ -1,77 +1,233 @@
 <!DOCTYPE html>
 <html>
-  <form id="inputForm" method="POST" action="https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec">
-  <label for=”Voornaam” style="color:#ff0000">*Vereist</label>
-  <input name="Voornaam" type="text" placeholder="Voornaam" required><br/>
-  <label for=”Voornaam” style="color:#ff0000">*Vereist</label>
-  <input name="Achternaam" type="text" placeholder="Achternaam" required><br/>
-  <label for=”Achternaam” style="color:#ff0000">*Vereist</label>
-  <input name="Email" type="email" placeholder="Email" required><br/>
-  <label for=”Email” style="color:#ff0000">*Vereist</label>
-  <input name="Telefoonnummer" type="text" placeholder="Telefoonnummer" required><br/>
-  <label for=”Telefoonnummer” style="color:#ff0000">*Vereist</label>
-  <input name="Leeftijd" type="text" placeholder="Leeftijd" required><br/>
-  <input name="Antwoord #1" type="radio" value="A" required> A. De Almelose Oliebol<br/>
-  <input name="Antwoord #1" type="radio" value="B" required> B. Gouki<br/>
-  <input name="Antwoord #1" type="radio" value="C" required> C. De appelflap<br/>
-  <input name="Antwoord #2" type="text" placeholder="Antwoord #2" ><br/>
-  <input name="Antwoord #3" type="text" placeholder="Antwoord #3" ><br/>
-  <input name="Antwoord #4" type="text" placeholder="Antwoord #4" ><br/>
-  <input name="Antwoord #5" type="text" placeholder="Antwoord #5" ><br/>
-  <input name="Antwoord #6" type="text" placeholder="Antwoord #6" ><br/>
-  <input name="Antwoord #7" type="text" placeholder="Antwoord #7" ><br/>
-  <input name="Antwoord #8" type="text" placeholder="Antwoord #8" ><br/>
-  <input name="Antwoord #9" type="text" placeholder="Antwoord #9" ><br/>
-  <input name="Antwoord #10" type="text" placeholder="Antwoord #10" ><br/>
-  <input name="Antwoord #11" type="text" placeholder="Antwoord #11" ><br/>
-  <input name="Antwoord #12" type="text" placeholder="Antwoord #12" ><br/>
-  <button type="submit">Versturen</button>
-</form>
-<style>
-input[type=text], input[type=email], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+  <body onload="document.getElementById('inputForm').reset();">
+    <div class="bodycont" style="max-width: 80%; padding-top: 20px; padding-bottom: 20px; padding-left: 10%">
+      <div id="backstlt" style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        color: #c80303;
+        font-size: 50px;
+        text-shadow: 2px 2px 0px rgba(255, 255, 255, 1), 4px 4px 0px rgba(160, 79, 0, 1);
+        font-weight: bold;
+      ">Kerstspeurtocht Winters Almelo</div>
+      <br/>
+      <form id="inputForm" method="POST" action="https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec">
+        <div class="identity" id="backstlt">
+          <label for=”Voornaam” style="font-weight: 600;">Voornaam <sup style="color:#ff0000; padding-left:5px;"">*Vereist</sup></label>
+          <input name="Voornaam" type="text" placeholder="Voornaam" required><br/>
+          <label for=”Achternaam” style="font-weight: 600;">Achternaam<sup style="color:#ff0000; padding-left:5px;"">*Vereist</sup></label>
+          <input name="Achternaam" type="text" placeholder="Achternaam" required><br/>
+          <label for="Email" style="font-weight: 600;">Email<sup style="color:#ff0000; padding-left:5px;"">*Vereist</sup></label>
+          <input name="Email" type="email" placeholder="Email" required><br/>
+          <label for="Telefoonnummer" style="font-weight: 600;">Telefoonnummer<sup style="color:#ff0000; padding-left:5px;"">*Vereist</sup></label>
+          <input name="Telefoonnummer" type="text" placeholder="Telefoonnummer" required><br/>
+          <label for="Leeftijd" style="font-weight: 600;">Leeftijd<sup style="color:#ff0000; padding-left:5px;">*Vereist</sup></label>
+          <input name="Leeftijd" type="text" placeholder="Leeftijd" required><br/>
+          <div class="tooltip"><i>Waarom is deze informatie nodig?</i>
+            <span class="tooltiptext">De ingegeven informatie:<i><ul><li>voornaam</li><li>achternaam</li><li>email</li><li>telefoonnummer</li><li>leeftijd</li></ul></i>word uitsluitend gebruikt voor deelname aan de kerstspeurtocht van Winters Almelo.<br/><br/>Deze informatie wordt enkel gebruikt om contact te kunnen leggen met betrekking tot de winactie en zal niet worden gedeeld met externe partijen.<br/><br/>De opgegeven informatie betreffend de naam van de deelnemer, mag worden vermeld op de social media pagina's van Almelo Events om de winaar van de kerstspeurtocht te vermelden.</span>
+          </div> 
+        </div>
+        <br/>
+        <div class="vragen" id="backstlt">
+          <div id="vraag">
+          <label>Hoe heet de oliebollenkraam op de kleine markt?</label><br/>
+          <input style="padding-top:10px;" name="Antwoord #1" type="radio" value="A" required> A. De Almelose Oliebol<br/>
+          <input name="Antwoord #1" type="radio" value="B" required> B. Gouki<br/>
+          <input name="Antwoord #1" type="radio" value="C" required> C. De appelflap
+        </div>
+        <div id="vraag">
+          <label>Is de burgemeester van Almelo een man of een vrouw?</label><br/>
+          <input name="Antwoord #2" type="radio" value="A" required> A. Een man<br/>
+          <input name="Antwoord #2" type="radio" value="B" required> B. De kerstman<br/>
+          <input name="Antwoord #2" type="radio" value="C" required> C. Een vrouw
+        </div>
+        <div id="vraag">
+          <label>Hoe groot is de drijvende ijsbaan op het marktplein?</label><br/>
+          <input name="Antwoord #3" type="radio" value="A" required> A. 325 vierkante meter<br/>
+          <input name="Antwoord #3" type="radio" value="B" required> B. 50 vierkante meter<br/>
+          <input name="Antwoord #3" type="radio" value="C" required> C. 500 vierkante meter
+        </div>
+        <div id="vraag">
+          <label>Welke kleur lampjes zitten er in de grote boom bij het Theater Hotel?</label><br/>
+          <input name="Antwoord #4" type="radio" value="A" required> A. Allemaal gekleurde lampjes<br/>
+          <input name="Antwoord #4" type="radio" value="B" required> B. Geen lampjes<br/>
+          <input name="Antwoord #4" type="radio" value="C" required> C. Witte lampjes
+        </div>
+        <div id="vraag">
+          <label>Hoeveel rendieren staan er voor de arrenslee in het Kersthuis?</label><br/>
+          <input name="Antwoord #5" type="radio" value="A" required> A. 9 rendieren<br/>
+          <input name="Antwoord #5" type="radio" value="B" required> B. 1 rendier<br/>
+          <input name="Antwoord #5" type="radio" value="C" required> C. 2 rendieren
+        </div>
+        <div id="vraag">
+          <label>Hoeveel rendieren heeft de kerstman?</label><br/>
+          <input name="Antwoord #6" type="radio" value="A" required> A. 2 rendieren<br/>
+          <input name="Antwoord #6" type="radio" value="B" required> B. 40 rendieren<br/>
+          <input name="Antwoord #6" type="radio" value="C" required> C. 9 rendieren
+        </div>
+        <div id="vraag">
+          <label>Hoe heet de vrouw van de kerstman?</label><br/>
+          <input name="Antwoord #7" type="radio" value="A" required> A. Mrs. Claus<br/>
+          <input name="Antwoord #7" type="radio" value="B" required> B. Annemarie<br/>
+          <input name="Antwoord #7" type="radio" value="C" required> C. Prinses Maxima
+        </div>
+        <div id="vraag">
+          <label>Hoe vaak is de kerstparade dit jaar?</label><br/>
+          <input name="Antwoord #8" type="radio" value="A" required> A. 4 keer<br/>
+          <input name="Antwoord #8" type="radio" value="B" required> B. 2 keer<br/>
+          <input name="Antwoord #8" type="radio" value="C" required> C. 8 keer
+        </div>
+        <div id="vraag">
+          <label>Hoe hoog is de schoorsteen bij restaurant Kreta?</label><br/>
+          <input name="Antwoord #9" type="radio" value="A" required> A. 25 meter<br/>
+          <input name="Antwoord #9" type="radio" value="B" required> B. 45 meter<br/>
+          <input name="Antwoord #9" type="radio" value="C" required> C. 100 meter
+        </div>
+        <div id="vraag">
+          <label>Hoeveel kerstbomen staan er in het Kersthuis?</label><br/>
+          <input name="Antwoord #10" type="radio" value="A" required> A. 22 bomen<br/>
+          <input name="Antwoord #10" type="radio" value="B" required> B. 12 bomen<br/>
+          <input name="Antwoord #10" type="radio" value="C" required> C. 6 bomen
+        </div>
+        <div id="vraag">
+          <label>Hoeveel inwoners heeft Almelo?</label><br/>
+          <input name="Antwoord #11" type="radio" value="A" required> A. 36356 inwoners<br/>
+          <input name="Antwoord #11" type="radio" value="B" required> B. 73000 inwoners<br/>
+          <input name="Antwoord #11" type="radio" value="C" required> C. 152000 inwoners
+        </div>
+        <button type="submit">Versturen</button>
+      </form>
+    </div>
+    <style>
+      input[type=text], input[type=email], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+      button[type=submit] {
+        width: 100%;
+        background-color: #e90f0f;
+        color: white;
+        padding: 14px 20px;
+        margin: 20px 0 !important;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        opacity: 100% !important;
+      }
+      
+      button[type=submit]:hover {
+        background-color: #c30b0b;
+      }
+      
+      #backstlt {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        opacity: 90%;
+        padding: 20px;
+        border: 4px solid #a4a4a4;
+        border-radius: 6px;
+      }
+      
+      label, * {
+        font-family: "Arial";
+      }
 
-button[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+      #vraag,input {
+        padding: 10px 20px;
+      }
+      .identity label {
+        font-size:16px;
+      }
 
-button[type=submit]:hover {
-  background-color: #45a049;
-}
+      #vraag label {
+        font-weight: 600;
+      }
 
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
+      #vraag input:first-child {
+        padding-top: 50px;
+      }
 
-label {
-  font-family: "Arial";
-}
-</style>
-<script><!--
-const scriptURL = "https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec";
-const form = document.forms['inputForm']
-form.addEventListener('submit', e => {
-   e.preventDefault()
-   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-         alert('Success!', response);
-      }).catch(error => console.error('Error!', error.message))
-});-->
-</script>
+      body {
+        background-image: url(https://loftlifestylesalon.nl/wp-content/uploads/2015/12/hd-kerst-wallpaper-met-een-brandende-kerstboom-en-sneeuw-kerst-achtergrond-foto.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      /* Tooltip container */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+        color: #848484;
+        text-decoration: underline;
+      }
+
+      /* Tooltip text */
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 400px;
+        background-color: #555;
+        color: #fff;
+        text-align: left;
+        padding: 15px 15px;
+        border-radius: 6px;
+        padding-left: 12px;
+
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .tooltip ul {
+        margin-left: -10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      /* Tooltip arrow */
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+
+      /* Show the tooltip text when you mouse over the tooltip container */
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      } 
+    </style>
+    <script>
+        // const scriptURL = "https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec";
+        // const form = document.forms['inputForm']
+        // form.addEventListener('submit', e => {
+        //   e.preventDefault()
+        //   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        //       .then(response => {
+        //         alert('Success!', response);
+        //       }).catch(error => console.error('Error!', error.message))
+        // });
+    </script>
+  </body>
 </html>
