@@ -29,7 +29,7 @@
         font-weight: bold;
       ">Kerstspeurtocht Winters Almelo</div>
       <br/>
-      <form id="inputForm" method="POST" action="https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec">
+      <form id="inputForm" method="POST">
         <div class="identity" id="backstlt">
           <label for=”Voornaam” style="font-weight: 600;">Voornaam <sup style="color:#ff0000; padding-left:5px;"">*Vereist</sup></label>
           <input name="Voornaam" type="text" placeholder="Voornaam" required><br/>
@@ -235,15 +235,15 @@
       } 
     </style>
     <script>
-        // const scriptURL = "https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec";
-        // const form = document.forms['inputForm']
-        // form.addEventListener('submit', e => {
-        //   e.preventDefault()
-        //   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        //       .then(response => {
-        //         alert('Success!', response);
-        //       }).catch(error => console.error('Error!', error.message))
-        // });
+        const scriptURL = "https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec";
+        const form = document.forms['inputForm']
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => {
+                alert('Success!', response);
+              }).catch(error => console.error('Error!', error.message))
+        });
     </script>
   </body>
 </html>
