@@ -1733,3 +1733,7 @@ nav.navigation.post-navigation {
     z-index: 2;
     position: relative;
 }
+
+i.menu-item-has-children > a::after {
+      content: "" !important;
+}
