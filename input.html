@@ -31,7 +31,7 @@ flex-direction: column;
 align-items:center;
       "><span ;="" style="font-size: 8vw; max-width:100%; padding:2px;">Kerst Speurtocht</span>Winters Almelo</div>
       <br/>
-      <form id="inputForm" method="POST">
+      <form id="inputForm" action="https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec">
         <div class="identity" id="backstlt">
           <label for=”Voornaam” style="font-weight: 600;">Voornaam <sup style="color:#ff0000; padding-left:5px;"">*Vereist</sup></label>
           <input name="Voornaam" type="text" placeholder="Voornaam" required><br/>
@@ -115,7 +115,7 @@ align-items:center;
           <input name="Antwoord #11" type="radio" value="B" required> B. 73000 inwoners<br/>
           <input name="Antwoord #11" type="radio" value="C" required> C. 152000 inwoners
         </div>
-        <button type="submit">Versturen</button>
+        <button type="submit" id="save" onclick="alert('Succesvol verstuurd!')">Versturen</button>
       </form>
     </div>
     <style>
@@ -239,13 +239,20 @@ align-items:center;
     <script>
         const scriptURL = "https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec";
         const form = document.forms['inputForm']
+      
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-              .then(response => {
-                alert('Success!', response);
-              }).catch(error => console.error('Error!', error.message))
-        });
+            .then(response => {
+              console.log('Success!', response);
+              var nameValue = nameinput.value;
+              var checkinoutValue = status.value;
+              setCookie("name", nameValue, 365); // set cookie with name value for 7 days
+              setCookie("status", checkinoutValue, 365); // set cookie with checkinout value for 7 days
+//               alert("Cookies set!"); // display confirmation message
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
     </script>
   </body>
 </html>
