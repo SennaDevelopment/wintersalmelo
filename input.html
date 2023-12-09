@@ -244,7 +244,7 @@ align-items:center;
           console.log(document.forms['inputForm']);
           fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(document.forms['inputForm'])})
             .then(response => {
-              console.log('Success!', response)
+              console.log('Succesvol verstuurd!', response)
             .catch(error => console.error('Error!', error.message))
             })
         });
