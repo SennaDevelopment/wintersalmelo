@@ -31,7 +31,7 @@ flex-direction: column;
 align-items:center;
       "><span ;="" style="font-size: 8vw; max-width:100%; padding:2px;">Kerst Speurtocht</span>Winters Almelo</div>
       <br/>
-      <form id="inputForm" action="https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec">
+      <form id="inputForm">
         <div class="identity" id="backstlt">
           <label for=”Voornaam” style="font-weight: 600;">Voornaam <sup style="color:#ff0000; padding-left:5px;"">*Vereist</sup></label>
           <input name="Voornaam" type="text" placeholder="Voornaam" required><br/>
@@ -238,21 +238,16 @@ align-items:center;
     </style>
     <script>
         const scriptURL = "https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec";
-        const form = document.forms['inputForm']
-      
-        form.addEventListener('submit', e => {
+
+        document.forms['inputForm'].addEventListener('submit', e => {
           e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          console.log(document.forms['inputForm']);
+          fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(document.forms['inputForm'])})
             .then(response => {
-              console.log('Success!', response);
-              var nameValue = nameinput.value;
-              var checkinoutValue = status.value;
-              setCookie("name", nameValue, 365); // set cookie with name value for 7 days
-              setCookie("status", checkinoutValue, 365); // set cookie with checkinout value for 7 days
-//               alert("Cookies set!"); // display confirmation message
-            })
+              console.log('Success!', response)
             .catch(error => console.error('Error!', error.message))
-        })
+            })
+        });
     </script>
   </body>
 </html>
