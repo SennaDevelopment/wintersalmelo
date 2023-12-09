@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Winters Almelo – Almelo Events</title>
+    <meta name="robots" content="max-image-preview:large">
+    <link rel="dns-prefetch" href="https://stats.wp.com/">
+    <link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+    <link rel="stylesheet" id="fontawesome-css" href="https://almeloevents.nl/wp-content/plugins/pearl-header-builder/assets/frontend/assets/css/font-awesome.min.css?ver=1.3.6" type="text/css" media="all">
+    <link rel="alternate" type="application/rss+xml" title="Almelo Events » feed" href="https://almeloevents.nl/feed/">
+    <link rel="alternate" type="application/rss+xml" title="Almelo Events » reactiesfeed" href="https://almeloevents.nl/comments/feed/">
+    <link rel="icon" href="https://almeloevents.nl/wp-content/uploads/2020/03/cropped-logo-1-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://almeloevents.nl/wp-content/uploads/2020/03/cropped-logo-1-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="https://almeloevents.nl/wp-content/uploads/2020/03/cropped-logo-1-180x180.png">
+    <meta name="msapplication-TileImage" content="https://almeloevents.nl/wp-content/uploads/2020/03/cropped-logo-1-270x270.png">
+  </head>
+  <body>
+    <div class="bodycont" style="max-width: 80%; padding-top: 20px; padding-bottom: 20px; padding-left: 10%">
+      <div id="backstlt" style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        color: #c80303;
+        font-size: 50px;
+        text-shadow: 2px 2px 0px rgba(255, 255, 255, 1), 4px 4px 0px rgba(160, 79, 0, 1);
+        font-weight: bold;
+flex-direction: column;
+align-items:center;
+      >Bedankt voor je deelname!<br/>Je doet nu mee aan de winactie
+</div>
+      <br/>
+    </div>
+    <style>
+      input[type=text], input[type=email], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+      button[type=submit] {
+        width: 100%;
+        background-color: #e90f0f;
+        color: white;
+        padding: 14px 20px;
+        margin: 20px 0 !important;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        opacity: 100% !important;
+      }
+      
+      button[type=submit]:hover {
+        background-color: #c30b0b;
+      }
+      
+      #backstlt {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        opacity: 90%;
+        padding: 20px;
+        border: 4px solid #a4a4a4;
+        border-radius: 6px;
+      }
+      
+      label, * {
+        font-family: "Arial";
+      }
+
+      #vraag,input {
+        padding: 10px 20px;
+      }
+      .identity label {
+        font-size:16px;
+      }
+
+      #vraag label {
+        font-weight: 600;
+      }
+
+      #vraag input:first-child {
+        padding-top: 50px;
+      }
+
+      body {
+        background-image: url(https://loftlifestylesalon.nl/wp-content/uploads/2015/12/hd-kerst-wallpaper-met-een-brandende-kerstboom-en-sneeuw-kerst-achtergrond-foto.jpg);
+        background-repeat: no-repeat;
+/*         background-attachment: fixed; */
+        background-size: cover;
+      }
+
+      /* Tooltip container */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+        color: #848484;
+        text-decoration: underline;
+      }
+
+      /* Tooltip text */
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 400px;
+        background-color: #555;
+        color: #fff;
+        text-align: left;
+        padding: 15px 15px;
+        border-radius: 6px;
+        padding-left: 12px;
+
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .tooltip ul {
+        margin-left: -10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      /* Tooltip arrow */
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+
+      /* Show the tooltip text when you mouse over the tooltip container */
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      } 
+    </style>
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbzSozl-uLbGEnrO_pRQxP1PVg_XDdKCfhEBGi-312Ayf302R2DMZ2yahWTyRmYaCDh5Og/exec";
+
+        document.forms['inputForm'].addEventListener('submit', e => {
+          e.preventDefault()
+          console.log(document.forms['inputForm']);
+          fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(document.forms['inputForm'])})
+            .then(response => {
+              console.log('Succesvol verstuurd!', response)
+            .catch(error => console.error('Error!', error.message))
+            })
+        });
+    </script>
+  </body>
+</html>
